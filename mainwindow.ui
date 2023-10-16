@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>841</width>
+    <height>363</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QPushButton { color: red}
+QPushButton {background-color: rgb(0, 170, 255)}
+QPushButton {font: 14pt &quot;MS Shell Dlg 2&quot;}
+
+QLabel { color: red }
+QLabel {font: 14pt &quot;MS Shell Dlg 2&quot;}
+
+QLineEdit { color: rgb(0, 0, 127) }
+QLineEdit {font: 14pt &quot;MS Shell Dlg 2&quot;}</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <layout class="QVBoxLayout" name="verticalLayout" stretch="0,1">
+    <item>
+     <widget class="QSplitter" name="splitter_2">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Expanding" vsizetype="Minimum">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>16777215</width>
+        <height>16777215</height>
+       </size>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+      <widget class="QLabel" name="label">
+       <property name="text">
+        <string>Your Message:</string>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="messageLineEdit"/>
+      <widget class="QPushButton" name="sendMessageButton">
+       <property name="text">
+        <string>Send to all</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="privateMessageSendButton">
+       <property name="text">
+        <string>Send private</string>
+       </property>
+      </widget>
+     </widget>
+    </item>
+    <item>
+     <widget class="QSplitter" name="splitter">
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+      <widget class="QTextBrowser" name="commonChatBrowser">
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(185, 189, 255);
+font: 12pt &quot;Arial&quot;;
+color: rgb(255, 1, 13)</string>
+       </property>
+      </widget>
+      <widget class="QTextBrowser" name="privateChatBrowser">
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(185, 189, 255);
+font: 12pt &quot;Arial&quot;;
+color: rgb(255, 1, 13)</string>
+       </property>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>841</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuMain_menu">
+    <property name="title">
+     <string>Main menu</string>
+    </property>
+    <addaction name="actionOpen_another_client"/>
+    <addaction name="actionServer_view"/>
+    <addaction name="separator"/>
+    <addaction name="actionCloseClient"/>
+   </widget>
+   <addaction name="menuMain_menu"/>
+  </widget>
+  <widget class="QToolBar" name="mainToolBar">
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <action name="actionOpen_another_client">
+   <property name="text">
+    <string>Open another client</string>
+   </property>
+  </action>
+  <action name="actionCloseClient">
+   <property name="text">
+    <string>Close this client</string>
+   </property>
+  </action>
+  <action name="actionServer_view">
+   <property name="text">
+    <string>Server view</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources/>
+ <connections/>
+</ui>
